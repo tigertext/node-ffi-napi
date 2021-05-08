@@ -118,16 +118,15 @@ describe('ForeignFunction', function () {
 
   it('should call the static "int_array" bindings', function () {
     const IntArray = Array('int');
-    const int_array = ffi.ForeignFunction(bindings.int_array, IntArray, [ IntArray ]);
+    const int_array = ffi.ForeignFunction(bindings.int_array, 'pointer', [ IntArray ]);
     const array = new IntArray([ 1, 2, 3, 4, 5, -1 ]);
     const out = int_array(array);
-    out.length = array.length;
-    assert.strictEqual(2, out[0]);
-    assert.strictEqual(4, out[1]);
-    assert.strictEqual(6, out[2]);
-    assert.strictEqual(8, out[3]);
-    assert.strictEqual(10, out[4]);
-    assert.strictEqual(-1, out[5]);
+    assert.strictEqual(2, ref.readInt32(out, 0));
+    assert.strictEqual(4, ref.readInt32(out, 4));
+    assert.strictEqual(6, ref.readInt32(out, 8));
+    assert.strictEqual(8, ref.readInt32(out, 12));
+    assert.strictEqual(10, ref.readInt32(out, 16));
+    assert.strictEqual(-1, ref.readInt32(out, 20));
   });
 
   it('should call the static "array_in_struct" bindings', function () {
