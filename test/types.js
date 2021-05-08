@@ -9,7 +9,7 @@ describe('types', function () {
       it('should match a valid `ffi_type` for "' + name + '"', () =>{
         const type = ref.types[name];
         const ffi_type = ffi.ffiType(type);
-        assert(Buffer.isBuffer(ffi_type));
+        assert(!!ffi_type);
       });
     });
 
@@ -19,7 +19,7 @@ describe('types', function () {
       type.ffi_type = undefined;
 
       const ffi_type = ffi.ffiType(type);
-      assert(Buffer.isBuffer(ffi_type));
+      assert(ref.isAddress(ffi_type));
     });
 
     it('should match a valid `ffi_type` for `CString` without a cached value', function () {
@@ -28,7 +28,7 @@ describe('types', function () {
       type.ffi_type = undefined;
 
       const ffi_type = ffi.ffiType(type);
-      assert(Buffer.isBuffer(ffi_type));
+      assert(ref.isAddress(ffi_type));
     });
 
     it('should match a valid `ffi_type` for `ulong` without a cached value', function () {
@@ -37,7 +37,7 @@ describe('types', function () {
       type.ffi_type = undefined;
 
       const ffi_type = ffi.ffiType(type);
-      assert(Buffer.isBuffer(ffi_type));
+      assert(ref.isAddress(ffi_type));
     });
   });
 });

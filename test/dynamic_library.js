@@ -22,7 +22,7 @@ describe('DynamicLibrary', function () {
       const lib = process.platform == 'win32' ? 'msvcrt' : 'libc';
       const handle = DynamicLibrary(lib + ffi.LIB_EXT);
       const symbol = handle.get('free');
-      assert(Buffer.isBuffer(symbol));
+      assert(ref.isAddress(symbol));
       assert.strictEqual(0, symbol.length);
     });
 

@@ -181,7 +181,7 @@ typedef void (*cb)(void);
 static cb callback = NULL;
 
 void SetCb(const CallbackInfo& args) {
-  callback = reinterpret_cast<cb>(args[0].As<Buffer<char>>().Data());
+  callback = reinterpret_cast<cb>(args[0].As<Number>().Int64Value());
 }
 
 void CallCb(const CallbackInfo& args) {

@@ -10,7 +10,7 @@ describe('Callback', function () {
 
   it('should create a C function pointer from a JS function', function () {
     const callback = ffi.Callback('void', [ ], function (val) { });
-    assert(Buffer.isBuffer(callback));
+    assert(ref.isAddress(callback));
   });
 
   it('should be invokable by an ffi\'d ForeignFunction', function () {
@@ -45,7 +45,7 @@ describe('Callback', function () {
     assert(!called);
     const nul = fn(ref.NULL);
     assert(called);
-    assert(Buffer.isBuffer(nul));
+    assert(ref.isAddress(nul));
     assert.strictEqual(0, nul.address());
   });
 
@@ -76,7 +76,7 @@ describe('Callback', function () {
     let cb = ffi.Callback('void', [ ], function () { });
 
     // register the callback function
-    bindings.set_cb(cb);
+    bindings.set_cb(cb.address());
 
     // should be ok
     bindings.call_cb();
@@ -107,7 +107,7 @@ describe('Callback', function () {
 
     const kill = (cb => {
       // register the callback function
-      bindings.set_cb(cb);
+      bindings.set_cb(cb.address());
       return function () {
         cb = null;
       }
@@ -206,7 +206,7 @@ describe('Callback', function () {
 
       const kill = (function (cb) {
         // register the callback function
-        bindings.set_cb(cb);
+        bindings.set_cb(cb.address());
         return function () {
           cb = null;
         }
@@ -255,7 +255,7 @@ describe('Callback', function () {
       let cb = ffi.Callback('void', [ ], function () { });
 
       // register the callback function
-      bindings.set_cb(cb);
+      bindings.set_cb(cb.address());
 
       // should be ok
       bindings.call_cb();

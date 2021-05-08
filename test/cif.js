@@ -15,7 +15,7 @@ describe('ffi_cif', function () {
 
   it('should return a Buffer representing the `ffi_cif` instance', function () {
     const cif = ffi.CIF(ref.types.void, [ ]);
-    assert(Buffer.isBuffer(cif));
+    assert(ref.isAddress(cif));
   });
 
   it('should throw an Error when given an invalid "type"', function () {
