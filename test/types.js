@@ -1,6 +1,6 @@
 'use strict';
 const assert = require('assert')
-const ref = require('ref-napi')
+const ref = require('@tigerconnect/ref-napi')
 const ffi = require('../')
 
 describe('types', function () {

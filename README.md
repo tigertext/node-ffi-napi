@@ -1,5 +1,7 @@
 Fork of [node-ffi-napi/node-ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi). Changes:
 * Include patches from [alphacep/node-ffi-napi](https://github.com/alphacep/node-ffi-napi)
+* Bundle types from `@types/node-ffi-napi@4.0.5`
+* Switch `ref-napi` dependency to `@tigerconnect/ref-napi`
 
 node-ffi-napi
 =============
@@ -35,7 +37,7 @@ Example
 -------
 
 ``` js
-var ffi = require('ffi-napi');
+var ffi = require('@tigerconnect/ffi-napi');
 
 var libm = ffi.Library('libm', {
   'ceil': [ 'double', [ 'double' ] ]
