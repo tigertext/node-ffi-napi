@@ -34,7 +34,7 @@
     }
   },
   "dependencies": {
-    "@tigerconnect/ref-napi": "^4.0.0-tc5",
+    "@tigerconnect/ref-napi": "^4.0.0-tc6",
     "@types/node": "*",
     "@types/ref-struct-di": "*",
     "debug": "^4.1.1",
@@ -51,6 +51,7 @@
   },
   "scripts": {
     "install": "node-gyp rebuild",
+    "prepublishOnly": "node-gyp rebuild",
     "test": "node-gyp rebuild --directory test && nyc mocha --expose-gc --reporter spec"
   },
   "repository": {
