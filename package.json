@@ -1,5 +1,5 @@
 {
-  "name": "ffi-napi",
+  "name": "@tigerconnect/ffi-napi",
   "version": "4.0.3-tc0",
   "license": "MIT",
   "author": "Anna Henningsen <anna@addaleax.net>",

@@ -2,6 +2,7 @@ Fork of [node-ffi-napi/node-ffi-napi](https://github.com/node-ffi-napi/node-ffi-
 * Include patches from [alphacep/node-ffi-napi](https://github.com/alphacep/node-ffi-napi)
 * Bundle types from `@types/node-ffi-napi@4.0.5`
 * Switch `ref-napi` dependency to `@tigerconnect/ref-napi`
+* Remove `prebuildify`
 
 node-ffi-napi
 =============
