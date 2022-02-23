@@ -1,3 +1,6 @@
+Fork of [node-ffi-napi/node-ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi). Changes:
+* Include patches from [alphacep/node-ffi-napi](https://github.com/alphacep/node-ffi-napi)
+
 node-ffi-napi
 =============
 ### Node.js Foreign Function Interface for N-API

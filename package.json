@@ -1,6 +1,6 @@
 {
   "name": "ffi-napi",
-  "version": "4.0.3",
+  "version": "4.0.3-tc0",
   "license": "MIT",
   "author": "Anna Henningsen <anna@addaleax.net>",
   "contributors": [
@@ -49,7 +49,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/node-ffi-napi/node-ffi-napi.git"
+    "url": "http://github.com/tigertext/node-ffi-napi.git"
   },
   "bugs": {
     "url": "http://github.com/node-ffi-napi/node-ffi-napi/issues"
