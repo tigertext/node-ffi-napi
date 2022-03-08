@@ -1,8 +1,9 @@
 Fork of [node-ffi-napi/node-ffi-napi](https://github.com/node-ffi-napi/node-ffi-napi). Changes:
 * Include patches from [alphacep/node-ffi-napi](https://github.com/alphacep/node-ffi-napi)
+* Provide prebuilds using Travis (Mac, Linux) and GitHub Actions (Windows)
+* Add prebuild for OSX on Apple Silicon
 * Bundle types from `@types/node-ffi-napi@4.0.5`
 * Switch `ref-napi` dependency to `@tigerconnect/ref-napi`
-* Remove `prebuildify`
 
 node-ffi-napi
 =============
