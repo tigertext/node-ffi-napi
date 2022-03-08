@@ -1,6 +1,6 @@
 {
   "name": "@tigerconnect/ffi-napi",
-  "version": "4.0.3-tc2",
+  "version": "4.0.3-tc3",
   "license": "MIT",
   "author": "Anna Henningsen <anna@addaleax.net>",
   "contributors": [
